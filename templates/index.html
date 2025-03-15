@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for new in news %}
+    <div class="con">
+        <a href="{% url 'news_detail' new.pk %}"><h1>{{ new.title }}</h1></a>
+        <p>{{ new.description }}</p>
+        <p>__________________________________________________</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
